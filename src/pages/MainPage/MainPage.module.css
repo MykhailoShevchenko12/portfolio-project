@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+p {
+  text-align: justify;
+}
+
 .header {
   width: 50%;
   display: flex;
@@ -20,6 +24,10 @@
 .name {
   font-size: 2rem;
   font-weight: bold;
+}
+
+.name p:nth-child(2) {
+  text-transform: uppercase;
 }
 
 .info {
@@ -66,4 +74,58 @@ a {
 
 .mainInfo {
   width: 65%;
+}
+
+.mainContent {
+  margin-bottom: 50px;
+}
+
+.mainContent ul {
+  margin-top: 10px;
+  padding: 0 50px;
+  list-style-type: disc;
+}
+
+.mainContentHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid white;
+  padding: 5px 0;
+}
+
+.listIcon {
+  font-size: 1.7rem;
+}
+
+.mainContentHeader h2 {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.contentText {
+  margin-top: 20px;
+}
+
+.about {
+  text-indent: 1.25em;
+  font-size: 1.2rem;
+}
+
+.speciality,
+.university {
+  text-indent: 1.25em;
+}
+
+.speciality {
+  font-weight: bold;
+}
+
+.university {
+  color: lightgrey;
+}
+
+.projectName,
+.projectDescription {
+  text-align: start;
+  padding: 0 10px;
 }

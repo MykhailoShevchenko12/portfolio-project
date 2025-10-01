@@ -1,10 +1,11 @@
-import { FaSquarePhone, FaSquareJs } from 'react-icons/fa6';
+import { FaSquarePhone, FaSquareJs, FaCircleUser } from 'react-icons/fa6';
 import { IoIosMailUnread } from 'react-icons/io';
 import { RiReactjsLine } from 'react-icons/ri';
 import { TbBrandRedux, TbBrandVscode } from 'react-icons/tb';
-import { FaHtml5, FaCss3 } from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaUserGraduate } from 'react-icons/fa';
 import { LuFigma } from 'react-icons/lu';
 import { SiInsomnia, SiUdemy } from 'react-icons/si';
+import { MdWorkHistory } from 'react-icons/md';
 
 import { Link } from 'react-router-dom';
 
@@ -19,8 +20,8 @@ const MainPage = () => {
           <div className={styles.header}>
             <img src={my_photo} alt="my-photo" className={styles.photo} />
             <div className={styles.name}>
-              <p>ШЕВЧЕНКО МИХАЙЛО</p>
-              <p>Junior frontend developer</p>
+              <p>Шевченко Михайло</p>
+              <p>Junior Frontend Developer</p>
             </div>
           </div>
           <div className={styles.info}>
@@ -111,29 +112,114 @@ const MainPage = () => {
             </div>
             <div className={styles.mainInfo}>
               <div className={styles.mainContent}>
-                <h2>Про себе</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Unde, autem impedit. Necessitatibus doloremque consequatur,
-                  rem nemo excepturi magni asperiores blanditiis quos culpa
-                  aliquam incidunt quis corporis, eveniet at quo, beatae eos
-                  temporibus placeat. Cum tempora velit consequuntur aperiam
-                  rerum, fuga blanditiis maxime, necessitatibus optio sint
-                  excepturi ratione. Voluptatem modi, perspiciatis neque
-                  architecto accusamus repudiandae dolores quam, blanditiis
-                  harum corporis facere eum eius quo dolorem, sit sint impedit
-                  soluta fugiat id maiores incidunt possimus tempore suscipit?
-                  Voluptatem culpa optio, temporibus quibusdam soluta facilis
-                  est maxime corrupti labore rerum minus sapiente ut nostrum sed
-                  voluptate distinctio necessitatibus, nemo inventore
-                  reprehenderit laboriosam. Tenetur nisi voluptates, facere,
-                  accusamus repellendus consequuntur eos ut dolor at laborum
-                  ipsa ducimus repudiandae corporis iste aliquid unde obcaecati
-                  suscipit eveniet quasi dolorem nobis ad sint odit deserunt.
-                  Facilis cumque aliquid, quidem fugit ut minima non inventore
-                  dignissimos provident id laboriosam porro error vitae dolores
-                  magnam facere quis eaque dolor.
-                </p>
+                <div className={styles.mainContentHeader}>
+                  <FaCircleUser className={styles.listIcon} />
+                  <h2>Про себе</h2>
+                </div>
+                <div className={styles.contentText}>
+                  <p className={styles.about}>
+                    Мені 24 роки, я почав вивчати сферу розробки веб-застосунків
+                    наприкінці 2024 року, паралельно працюючи над своїм
+                    дипломним бакалаврським проєктом - книжковим
+                    інтернет-магазином "BookNest", на даний момент навчаюсь на
+                    магістратурі. За цей час, проходячи курси по HTML, Css та
+                    JavaScript, я працював над декількома проєктами які
+                    включають в себе реалізацію застосунку за допомогою
+                    vanillaJS, бібліотеки React, з використанням бібліотеки
+                    Redux, також є приклади власних простих API сервісів. В
+                    своїй роботі я завжди орієнтуюсь на якість та намагаюсь
+                    удосконалити свої навички з кожним проєктом.
+                  </p>
+                </div>
+              </div>
+              <div className={styles.mainContent}>
+                <div className={styles.mainContentHeader}>
+                  <FaUserGraduate className={styles.listIcon} />
+                  <h2>Освіта</h2>
+                </div>
+                <div className={styles.contentText}>
+                  <p className={styles.speciality}>
+                    Обслуговування комп’ютерних систем і мереж (2016 - 2020)
+                  </p>
+                  <p className={styles.university}>
+                    Коледж інформаційних систем і технологій ДВНЗ КНЕУ імені
+                    Вадима Гетьмана
+                  </p>
+                </div>
+                <div className={styles.contentText}>
+                  <p className={styles.speciality}>
+                    Комп’ютерні науки (Бакалавр) (2020 - 2025)
+                  </p>
+                  <p className={styles.university}>
+                    Київський національний економічний університет імені Вадима
+                    Гетьмана
+                  </p>
+                </div>
+                <div className={styles.contentText}>
+                  <p className={styles.speciality}>
+                    Інформаційні управляючи системи і технології (Магістр) (2025
+                    - Нині)
+                  </p>
+                  <p className={styles.university}>
+                    Київський національний економічний університет імені Вадима
+                    Гетьмана
+                  </p>
+                </div>
+              </div>
+              <div className={styles.mainContent}>
+                <div className={styles.mainContentHeader}>
+                  <MdWorkHistory className={styles.listIcon} />
+                  <h2>Досвід</h2>
+                </div>
+                <div className={styles.contentText}>
+                  <h3 className={styles.projectName}>BookNest</h3>
+                  <p className={styles.projectDescription}>
+                    Книжковий інтернет-магазин з інтегрованою платіжною системою
+                  </p>
+                  <ul>
+                    <li>
+                      Інтерфейс користувача реалізований через бібліотеку React,
+                      стилізація через CSS, для централізованого управління
+                      станами використовалась бібліотека Redux.
+                    </li>
+                    <li>Інтегрована платіжна система LiqPay.</li>
+                    <li>
+                      Серверна частина побудована на платформі Node.js з
+                      використанням Express.
+                    </li>
+                    <li>В якості бази даних використовуєтся MongoDB.</li>
+                  </ul>
+                </div>
+                <div className={styles.contentText}>
+                  <h3 className={styles.projectName}>Random Quotes App</h3>
+                  <p className={styles.projectDescription}>
+                    Генерація випадкової цитати через публічний API, з
+                    можливістю зберігання цитат у список обраних
+                  </p>
+                  <ul>
+                    <li>
+                      Інтерфейс користувача реалізований через бібліотеку React,
+                      стилізація через CSS Modules, для передачі props через
+                      дерево компонентів використовується ContextAPI.
+                    </li>
+                    <li>Масив обраних цитат зберігається в localStorage.</li>
+                  </ul>
+                </div>
+                <div className={styles.contentText}>
+                  <h3 className={styles.projectName}>Book Library App</h3>
+                  <p className={styles.projectDescription}>
+                    Додавання книг до списку улюблених по назві, рандомна книга
+                    з власного API сервісу
+                  </p>
+                  <ul>
+                    <li>
+                      Інтерфейс користувача реалізований через бібліотеку React,
+                      стилізація через CSS, для централізованого управління
+                      станами використовалась бібліотека Redux.
+                    </li>
+                    <li>Масив улюблених книг зберігається в localStorage.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
