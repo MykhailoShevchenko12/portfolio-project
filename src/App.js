@@ -3,6 +3,7 @@ import './App.css';
 import MainPage from './pages/MainPage/MainPage';
 import RandomQuote from './pages/RandomQuote/RandomQuote';
 import BookLibrary from './pages/BookLibraryApp/BookLibrary';
+import Docs from './pages/Docs/Docs';
 import Layout from './components/Layout/Layout';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="random-quotes" element={<RandomQuote />} />
           <Route path="book-library" element={<BookLibrary />} />
+          <Route path="docs" element={<Docs />} />
         </Route>
       </Routes>
     </div>

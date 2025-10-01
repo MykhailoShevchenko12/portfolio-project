@@ -1,4 +1,4 @@
-// import styles from './RandomQuote.module.css';
+import './RandomQuote.css';
 
 const RandomQuote = () => {
   return <div>RandomQuote</div>;
