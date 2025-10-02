@@ -13,7 +13,7 @@ const Navbar = () => {
               isActive ? styles.navLinkActive : styles.navLink
             }
           >
-            Random Quote App
+            Random Quote
           </NavLink>
           <NavLink
             to={'book-library'}
@@ -21,7 +21,7 @@ const Navbar = () => {
               isActive ? styles.navLinkActive : styles.navLink
             }
           >
-            Book Library App
+            Book Library
           </NavLink>
           <NavLink
             to={'docs'}

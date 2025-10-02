@@ -208,7 +208,7 @@ const MainPage = () => {
                 <div className={styles.contentText}>
                   <h3 className={styles.projectName}>Book Library App</h3>
                   <p className={styles.projectDescription}>
-                    Додавання книг до списку улюблених по назві, рандомна книга
+                    Додавання книг до списку улюблених по назві, випадкова книга
                     з власного API сервісу
                   </p>
                   <ul>
