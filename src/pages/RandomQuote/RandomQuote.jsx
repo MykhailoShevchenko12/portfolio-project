@@ -30,18 +30,20 @@ const RandomQuote = () => {
             >
               Get random quote
             </button>
-            <button
-              className={styles.favoriteBtn}
-              onClick={() =>
-                toggleFavorites(currentQuote, setCurrentQuote, setFavorites)
-              }
-            >
-              {currentQuote.isFavorite ? (
-                <MdOutlineFavorite />
-              ) : (
-                <MdFavoriteBorder />
-              )}
-            </button>
+            {currentQuote && (
+              <button
+                className={styles.favoriteBtn}
+                onClick={() =>
+                  toggleFavorites(currentQuote, setCurrentQuote, setFavorites)
+                }
+              >
+                {currentQuote.isFavorite ? (
+                  <MdOutlineFavorite />
+                ) : (
+                  <MdFavoriteBorder />
+                )}
+              </button>
+            )}
           </div>
           <div className={styles.favorites}>
             {!!favorites.length ? (
