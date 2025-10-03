@@ -1,26 +1,12 @@
 import { MdFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
-
-import axios from 'axios';
-
-import styles from './RandomQuote.module.css';
 import { useState } from 'react';
+import fetchQuote from './handlers/fetchQuote';
+import toggleFavorites from './handlers/favoriteQuotes';
+import styles from './RandomQuote.module.css';
 
 const RandomQuote = () => {
-  const [quote, setQuote] = useState('');
-  const [author, setAuthor] = useState('');
-
-  const getRandomQuote = async () => {
-    try {
-      const response = await axios.get(
-        'https://quoteslate.vercel.app/api/quotes/random'
-      );
-      const { quote, author } = response.data;
-      setQuote(quote);
-      setAuthor(author);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [currentQuote, setCurrentQuote] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
   return (
     <>
@@ -29,19 +15,51 @@ const RandomQuote = () => {
         <div className={styles.quoteContainer}>
           <div className={styles.quote}>
             <p className={styles.quoteText}>
-              {quote ? quote : 'Click the button to get a random quote!'}
+              {currentQuote
+                ? currentQuote.quote
+                : 'Click the button to get a random quote!'}
             </p>
             <p className={styles.quoteAuthor}>
-              © {author ? author : 'from admine with love'}
+              © {currentQuote ? currentQuote.author : 'from admine with love'}
             </p>
           </div>
           <div className={styles.buttons}>
-            <button className={styles.generateBtn} onClick={getRandomQuote}>
+            <button
+              className={styles.generateBtn}
+              onClick={() => fetchQuote(setCurrentQuote)}
+            >
               Get random quote
             </button>
-            <button className={styles.favoriteBtn}>
-              <MdFavoriteBorder />
+            <button
+              className={styles.favoriteBtn}
+              onClick={() =>
+                toggleFavorites(currentQuote, setCurrentQuote, setFavorites)
+              }
+            >
+              {currentQuote.isFavorite ? (
+                <MdOutlineFavorite />
+              ) : (
+                <MdFavoriteBorder />
+              )}
             </button>
+          </div>
+          <div className={styles.favorites}>
+            {!!favorites.length ? (
+              favorites.map((favoriteQuote) => {
+                return (
+                  <div key={favoriteQuote.id} className={styles.favoriteQuote}>
+                    <p className={styles.favoriteQuoteText}>
+                      {favoriteQuote.quote}
+                    </p>
+                    <p className={styles.favoriteQuoteAuthor}>
+                      © {favoriteQuote.author}
+                    </p>
+                  </div>
+                );
+              })
+            ) : (
+              <p className={styles.noneFavorites}>Обраних цитат немає</p>
+            )}
           </div>
         </div>
       </div>
