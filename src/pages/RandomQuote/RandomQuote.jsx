@@ -1,12 +1,27 @@
 import { MdFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import fetchQuote from './handlers/fetchQuote';
 import toggleFavorites from './handlers/favoriteQuotes';
+import removeFavoriteQuote from './handlers/removeFavoriteQuote';
 import styles from './RandomQuote.module.css';
+import initialState from './handlers/initialState';
 
 const RandomQuote = () => {
-  const [currentQuote, setCurrentQuote] = useState(null);
-  const [favorites, setFavorites] = useState([]);
+  const parsedQuoteData = initialState();
+  const [currentQuote, setCurrentQuote] = useState(() => {
+    return parsedQuoteData ? parsedQuoteData.currentQuote : null;
+  });
+  const [favorites, setFavorites] = useState(() => {
+    return parsedQuoteData ? parsedQuoteData.favorites : [];
+  });
+
+  useEffect(() => {
+    const quoteData = {
+      currentQuote,
+      favorites,
+    };
+    localStorage.setItem('quoteData', JSON.stringify(quoteData));
+  }, [currentQuote, favorites]);
 
   return (
     <>
@@ -49,7 +64,18 @@ const RandomQuote = () => {
             {!!favorites.length ? (
               favorites.map((favoriteQuote) => {
                 return (
-                  <div key={favoriteQuote.id} className={styles.favoriteQuote}>
+                  <div
+                    key={favoriteQuote.id}
+                    className={styles.favoriteQuote}
+                    onDoubleClick={() =>
+                      removeFavoriteQuote(
+                        currentQuote,
+                        favoriteQuote,
+                        favorites,
+                        setFavorites
+                      )
+                    }
+                  >
                     <p className={styles.favoriteQuoteText}>
                       {favoriteQuote.quote}
                     </p>
