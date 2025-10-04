@@ -1,12 +1,11 @@
 import { MdFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { useEffect, useState } from 'react';
-import fetchQuote from './handlers/fetchQuote';
-import toggleFavorites from './handlers/favoriteQuotes';
-import removeFavoriteQuote from './handlers/removeFavoriteQuote';
+import { useQuoteContext } from '../../context/RandomQuoteContext';
 import styles from './RandomQuote.module.css';
-import initialState from './handlers/initialState';
 
 const RandomQuote = () => {
+  const { toggleFavorites, fetchQuote, initialState, removeFavoriteQuote } =
+    useQuoteContext();
   const parsedQuoteData = initialState();
   const [currentQuote, setCurrentQuote] = useState(() => {
     return parsedQuoteData ? parsedQuoteData.currentQuote : null;

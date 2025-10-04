@@ -5,6 +5,7 @@ import RandomQuote from './pages/RandomQuote/RandomQuote';
 import BookLibrary from './pages/BookLibraryApp/BookLibrary';
 import Docs from './pages/Docs/Docs';
 import Layout from './components/Layout/Layout';
+import QuoteProvider from './context/RandomQuoteContext';
 
 function App() {
   return (
@@ -12,7 +13,14 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<MainPage />} />
-          <Route path="random-quotes" element={<RandomQuote />} />
+          <Route
+            path="random-quotes"
+            element={
+              <QuoteProvider>
+                <RandomQuote />
+              </QuoteProvider>
+            }
+          />
           <Route path="book-library" element={<BookLibrary />} />
           <Route path="docs" element={<Docs />} />
         </Route>
