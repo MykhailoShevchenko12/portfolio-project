@@ -1,16 +1,16 @@
 import { NavLink } from 'react-router-dom';
-import styles from './Navbar.module.css';
+import './Navbar.css';
 
 const Navbar = () => {
   return (
     <>
-      <div className={styles.header}>
-        <p className={styles.logo}>ShevchenkoM</p>
-        <ul className={styles.menu}>
+      <div className="navbar-header">
+        <p className="navbar-logo">ShevchenkoM</p>
+        <ul className="navbar-menu">
           <NavLink
             to={'random-quotes'}
             className={({ isActive }) =>
-              isActive ? styles.navLinkActive : styles.navLink
+              isActive ? 'nav-link-active' : 'nav-link'
             }
           >
             Random Quote
@@ -18,7 +18,7 @@ const Navbar = () => {
           <NavLink
             to={'book-library'}
             className={({ isActive }) =>
-              isActive ? styles.navLinkActive : styles.navLink
+              isActive ? 'nav-link-active' : 'nav-link'
             }
           >
             Book Library
@@ -26,7 +26,7 @@ const Navbar = () => {
           <NavLink
             to={'docs'}
             className={({ isActive }) =>
-              isActive ? styles.navLinkActive : styles.navLink
+              isActive ? 'nav-link-active' : 'nav-link'
             }
           >
             Docs
@@ -34,7 +34,7 @@ const Navbar = () => {
           <NavLink
             to={'/'}
             className={({ isActive }) =>
-              isActive ? styles.navLinkActive : styles.navLink
+              isActive ? 'nav-link-active' : 'nav-link'
             }
           >
             About me

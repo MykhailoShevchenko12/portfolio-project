@@ -10,81 +10,81 @@ import { MdWorkHistory } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import my_photo from '../../assets/images/photo.png';
-import styles from './MainPage.module.css';
+import './MainPage.css';
 
 const MainPage = () => {
   return (
     <>
       <div className="container">
-        <div className={styles.wrapper}>
-          <div className={styles.header}>
-            <img src={my_photo} alt="my-photo" className={styles.photo} />
-            <div className={styles.name}>
+        <div className="about-wrapper">
+          <div className="about-header">
+            <img src={my_photo} alt="my-photo" className="about-photo" />
+            <div className="about-name">
               <p>Шевченко Михайло</p>
               <p>Junior Frontend Developer</p>
             </div>
           </div>
-          <div className={styles.info}>
-            <div className={styles.sidebar}>
-              <div className={styles.sidebarContent}>
+          <div className="about-info">
+            <div className="about-sidebar">
+              <div className="about-sidebar-content">
                 <h2>Контакти</h2>
                 <ul>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <FaSquarePhone />
                     <li>+380660054160</li>
                   </div>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <IoIosMailUnread />
                     <li>mikhailshevchenko075@gmail.com</li>
                   </div>
                 </ul>
               </div>
-              <div className={styles.sidebarContent}>
+              <div className="about-sidebar-content">
                 <h2>Навички</h2>
                 <ul>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <FaSquareJs />
                     <li>JavaScript</li>
                   </div>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <RiReactjsLine />
                     <li>React</li>
                   </div>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <TbBrandRedux />
                     <li>Redux</li>
                   </div>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <FaHtml5 />
                     <li>HTML</li>
                   </div>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <FaCss3 />
                     <li>Css</li>
                   </div>
                 </ul>
               </div>
-              <div className={styles.sidebarContent}>
+              <div className="about-sidebar-content">
                 <h2>Інструменти</h2>
                 <ul>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <TbBrandVscode />
                     <li>vsCode</li>
                   </div>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <LuFigma />
                     <li>Figma</li>
                   </div>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <SiInsomnia />
                     <li>Insomnia</li>
                   </div>
                 </ul>
               </div>
-              <div className={styles.sidebarContent}>
+              <div className="about-sidebar-content">
                 <h2>Сертифікати</h2>
                 <ul>
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <SiUdemy />
                     <Link
                       to={
@@ -96,7 +96,7 @@ const MainPage = () => {
                     </Link>
                   </div>
 
-                  <div className={styles.listItem}>
+                  <div className="about-listItem">
                     <SiUdemy />
                     <Link
                       to={
@@ -110,14 +110,14 @@ const MainPage = () => {
                 </ul>
               </div>
             </div>
-            <div className={styles.mainInfo}>
-              <div className={styles.mainContent}>
-                <div className={styles.mainContentHeader}>
-                  <FaCircleUser className={styles.listIcon} />
+            <div className="about-main-info">
+              <div className="about-main-content">
+                <div className="about-main-content-header">
+                  <FaCircleUser className="about-main-list-icon" />
                   <h2>Про себе</h2>
                 </div>
-                <div className={styles.contentText}>
-                  <p className={styles.about}>
+                <div className="about-main-content-text">
+                  <p>
                     Я почав вивчати сферу розробки веб-застосунків наприкінці
                     2024 року, паралельно працюючи над своїм дипломним
                     бакалаврським проєктом - книжковим інтернет-магазином
@@ -132,48 +132,48 @@ const MainPage = () => {
                   </p>
                 </div>
               </div>
-              <div className={styles.mainContent}>
-                <div className={styles.mainContentHeader}>
-                  <FaUserGraduate className={styles.listIcon} />
+              <div className="about-main-content">
+                <div className="about-main-content-header">
+                  <FaUserGraduate className="about-main-list-icon" />
                   <h2>Освіта</h2>
                 </div>
-                <div className={styles.contentText}>
-                  <p className={styles.speciality}>
+                <div className="about-main-content-text">
+                  <p className="about-main-speciality">
                     Обслуговування комп’ютерних систем і мереж (2016 - 2020)
                   </p>
-                  <p className={styles.university}>
+                  <p className="about-main-university">
                     Коледж інформаційних систем і технологій ДВНЗ КНЕУ імені
                     Вадима Гетьмана
                   </p>
                 </div>
-                <div className={styles.contentText}>
-                  <p className={styles.speciality}>
+                <div className="about-main-content-text">
+                  <p className="about-main-speciality">
                     Комп’ютерні науки (Бакалавр) (2020 - 2025)
                   </p>
-                  <p className={styles.university}>
+                  <p className="about-main-university">
                     Київський національний економічний університет імені Вадима
                     Гетьмана
                   </p>
                 </div>
-                <div className={styles.contentText}>
-                  <p className={styles.speciality}>
+                <div className="about-main-content-text">
+                  <p className="about-main-speciality">
                     Інформаційні управляючи системи і технології (Магістр) (2025
                     - Нині)
                   </p>
-                  <p className={styles.university}>
+                  <p className="about-main-university">
                     Київський національний економічний університет імені Вадима
                     Гетьмана
                   </p>
                 </div>
               </div>
-              <div className={styles.mainContent}>
-                <div className={styles.mainContentHeader}>
-                  <MdWorkHistory className={styles.listIcon} />
+              <div className="about-main-content">
+                <div className="about-main-content-header">
+                  <MdWorkHistory className="about-main-list-icon" />
                   <h2>Досвід</h2>
                 </div>
-                <div className={styles.contentText}>
-                  <h3 className={styles.projectName}>BookNest</h3>
-                  <p className={styles.projectDescription}>
+                <div className="about-main-content-text">
+                  <h3 className="about-main-projectName">BookNest</h3>
+                  <p className="about-main-projectDescription">
                     Книжковий інтернет-магазин з інтегрованою платіжною системою
                   </p>
                   <ul>
@@ -190,9 +190,9 @@ const MainPage = () => {
                     <li>В якості бази даних використовуєтся MongoDB.</li>
                   </ul>
                 </div>
-                <div className={styles.contentText}>
-                  <h3 className={styles.projectName}>Random Quotes App</h3>
-                  <p className={styles.projectDescription}>
+                <div className="about-main-content-text">
+                  <h3 className="about-main-projectName">Random Quotes App</h3>
+                  <p className="about-main-projectDescription">
                     Генерація випадкової цитати через публічний API, з
                     можливістю зберігання цитат у список обраних
                   </p>
@@ -205,9 +205,9 @@ const MainPage = () => {
                     <li>Масив обраних цитат зберігається в localStorage.</li>
                   </ul>
                 </div>
-                <div className={styles.contentText}>
-                  <h3 className={styles.projectName}>Book Library App</h3>
-                  <p className={styles.projectDescription}>
+                <div className="about-main-content-text">
+                  <h3 className="about-main-projectName">Book Library App</h3>
+                  <p className="about-main-projectDescription">
                     Додавання книг до списку улюблених по назві, випадкова книга
                     з власного API сервісу
                   </p>

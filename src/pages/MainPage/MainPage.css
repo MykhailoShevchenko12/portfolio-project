@@ -1,4 +1,4 @@
-.wrapper {
+.about-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -9,123 +9,123 @@ p {
   text-align: justify;
 }
 
-.header {
+.about-header {
   width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.photo {
+.about-photo {
   border-radius: 50%;
   border: 5px solid #ffff;
 }
 
-.name {
+.about-name {
   font-size: 2rem;
   font-weight: bold;
 }
 
-.name p:nth-child(2) {
+.about-name p:nth-child(2) {
   text-transform: uppercase;
 }
 
-.info {
+.about-info {
   margin-top: 50px;
   width: 70%;
   display: flex;
   justify-content: space-between;
 }
 
-.sidebar {
+.about-sidebar {
   width: 25%;
 }
 
-.sidebar h2 {
+.about-sidebar h2 {
   border-bottom: 2px solid white;
 }
 
-.sidebar ul a {
+.about-sidebar ul a {
   color: white;
   text-decoration: underline;
 }
 
-.sidebarContent h2,
+.about-sidebar-content h2,
 ul {
-  margin-top: 30px;
+  margin-top: 10px;
   list-style-type: none;
   text-align: justify;
 }
 
-.sidebarContent ul {
+.about-sidebar-content ul {
   padding: 0 20px;
 }
 
-.listItem {
+.about-listItem {
   display: flex;
   align-items: center;
 }
 
-.listItem li,
+.about-listItem li,
 a {
   margin-left: 10px;
   margin-top: 5px;
 }
 
-.mainInfo {
+.about-main-info {
   width: 65%;
 }
 
-.mainContent {
+.about-main-content {
   margin-bottom: 50px;
 }
 
-.mainContent ul {
+.about-main-content ul {
   margin-top: 10px;
   padding: 0 50px;
   list-style-type: disc;
 }
 
-.mainContentHeader {
+.about-main-content-header {
   display: flex;
   align-items: center;
   border-bottom: 2px solid white;
   padding: 5px 0;
 }
 
-.listIcon {
+.about-main-list-icon {
   font-size: 1.7rem;
 }
 
-.mainContentHeader h2 {
+.about-main-content-header h2 {
   margin-left: 10px;
   text-transform: uppercase;
 }
 
-.contentText {
+.about-main-content-text {
   margin-top: 20px;
 }
 
-.about {
+.about-main-content-text p {
   text-indent: 1.25em;
   font-size: 1.2rem;
 }
 
-.speciality,
-.university {
+.about-main-speciality,
+.about-main-university {
   text-indent: 1.25em;
 }
 
-.speciality {
+.about-main-speciality {
   font-weight: bold;
 }
 
-.university {
+.about-main-university {
   color: lightgrey;
 }
 
-.projectName,
-.projectDescription {
+.about-main-projectName,
+.about-main-projectDescription {
   text-align: start;
   padding: 0 10px;
 }

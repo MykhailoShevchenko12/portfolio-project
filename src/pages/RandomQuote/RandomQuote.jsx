@@ -1,7 +1,7 @@
 import { MdFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 import { useEffect, useState } from 'react';
 import { useQuoteContext } from '../../context/RandomQuoteContext';
-import styles from './RandomQuote.module.css';
+import './RandomQuote.css';
 
 const RandomQuote = () => {
   const { toggleFavorites, fetchQuote, initialState, removeFavoriteQuote } =
@@ -26,27 +26,27 @@ const RandomQuote = () => {
     <>
       <div className="container">
         <h2>Random Quote App</h2>
-        <div className={styles.quoteContainer}>
-          <div className={styles.quote}>
-            <p className={styles.quoteText}>
+        <div className="quote-container">
+          <div className="quote">
+            <p className="quote-text">
               {currentQuote
                 ? currentQuote.quote
                 : 'Click the button to get a random quote!'}
             </p>
-            <p className={styles.quoteAuthor}>
+            <p className="quote-author">
               © {currentQuote ? currentQuote.author : 'from admine with love'}
             </p>
           </div>
-          <div className={styles.buttons}>
+          <div className="quote-buttons">
             <button
-              className={styles.generateBtn}
+              className="quote-generate-btn"
               onClick={() => fetchQuote(setCurrentQuote)}
             >
               Get random quote
             </button>
             {currentQuote && (
               <button
-                className={styles.favoriteBtn}
+                className="quote-favorite-btn"
                 onClick={() =>
                   toggleFavorites(currentQuote, setCurrentQuote, setFavorites)
                 }
@@ -59,13 +59,13 @@ const RandomQuote = () => {
               </button>
             )}
           </div>
-          <div className={styles.favorites}>
+          <div className="quote-favorites">
             {!!favorites.length ? (
               favorites.map((favoriteQuote) => {
                 return (
                   <div
                     key={favoriteQuote.id}
-                    className={styles.favoriteQuote}
+                    className="favorite-quote"
                     onDoubleClick={() =>
                       removeFavoriteQuote(
                         currentQuote,
@@ -75,17 +75,15 @@ const RandomQuote = () => {
                       )
                     }
                   >
-                    <p className={styles.favoriteQuoteText}>
-                      {favoriteQuote.quote}
-                    </p>
-                    <p className={styles.favoriteQuoteAuthor}>
+                    <p className="favorite-quote-text">{favoriteQuote.quote}</p>
+                    <p className="favorite-quote-author">
                       © {favoriteQuote.author}
                     </p>
                   </div>
                 );
               })
             ) : (
-              <p className={styles.noneFavorites}>Обраних цитат немає</p>
+              <p className="none-favorite-quote">Обраних цитат немає</p>
             )}
           </div>
         </div>

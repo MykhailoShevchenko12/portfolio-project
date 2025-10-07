@@ -1,4 +1,4 @@
-.header {
+.navbar-header {
   position: fixed;
   height: 70px;
   width: 100%;
@@ -9,13 +9,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.logo {
+.navbar-logo {
   margin: 0 auto 0 30px;
   font-family: Lora, sans-serif;
   font-size: 2rem;
 }
 
-.menu {
+.navbar-menu {
   display: flex;
   margin: 0 50px 0 0;
   gap: 50px;
@@ -24,10 +24,10 @@
   list-style-type: none;
 }
 
-.navLink {
+.nav-link {
   color: white;
 }
 
-.navLinkActive {
+.nav-link-active {
   color: #4ddbc5;
 }
