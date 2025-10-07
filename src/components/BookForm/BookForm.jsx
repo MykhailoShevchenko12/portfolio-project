@@ -11,12 +11,16 @@ const BookForm = () => {
         onSubmit={(event) => formSubmitHandler(event)}
         className="book-form"
       >
-        <h2 className="book-form-h2">Book Form</h2>
+        <h2 className="book-form-h2">Add Book to the list</h2>
         <div className="book-form-inputs">
-          {/* <label htmlFor="text">Title*</label> */}
-          <input type="text" className="form-input" />
-          {/* <label htmlFor="text">Author*</label> */}
-          <input type="text" className="form-input" />
+          <label htmlFor="title">
+            Title*
+            <input type="text" id="title" className="form-input" />
+          </label>
+          <label htmlFor="author">
+            Author*
+            <input type="text" id="author" className="form-input" />
+          </label>
         </div>
         <div className="book-form-buttons">
           <button type="submit" className="book-form-addBook book-active">
