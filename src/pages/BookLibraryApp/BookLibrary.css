@@ -1,0 +1,16 @@
+.book-library {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.book-library .leftside {
+  flex: 1;
+  flex-basis: 20%;
+  margin-right: 50px;
+}
+
+.book-library .rightside {
+  flex: 1;
+  flex-basis: 65%;
+}

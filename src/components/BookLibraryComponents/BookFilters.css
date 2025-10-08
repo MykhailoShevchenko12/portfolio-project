@@ -1,0 +1,51 @@
+.book-filter {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.book-filter label,
+.book-filter input[type='checkbox'] {
+  cursor: pointer;
+}
+
+.book-filter label {
+  color: black;
+  font-weight: 600;
+}
+
+.book-filter input[type='text'] {
+  width: 30%;
+  height: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.book-filter input[type='text']::placeholder {
+  font-weight: 600;
+}
+
+.book-filter input[type='checkbox'] {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+
+.book-filter button {
+  width: 100px;
+  height: 35px;
+  background-color: #4ddbc5;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-filter button:active {
+  background-color: #496964;
+  color: white;
+}
