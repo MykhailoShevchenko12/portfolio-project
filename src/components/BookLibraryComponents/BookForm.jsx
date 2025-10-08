@@ -1,8 +1,18 @@
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  setTitle,
+  setAuthor,
+  resetForm,
+} from '../../store/features/bookLibrarySlice';
 import './BookForm.css';
 
 const BookForm = () => {
+  const { title, author } = useSelector((state) => state.book);
+  const dispatch = useDispatch();
+
   function formSubmitHandler(event) {
     event.preventDefault();
+    dispatch(resetForm());
   }
 
   return (
@@ -15,11 +25,23 @@ const BookForm = () => {
         <div className="book-form-inputs">
           <label htmlFor="title">
             Title*
-            <input type="text" id="title" className="form-input" />
+            <input
+              type="text"
+              id="title"
+              className="form-input"
+              value={title}
+              onChange={(e) => dispatch(setTitle(e.target.value))}
+            />
           </label>
           <label htmlFor="author">
             Author*
-            <input type="text" id="author" className="form-input" />
+            <input
+              type="text"
+              id="author"
+              className="form-input"
+              value={author}
+              onChange={(e) => dispatch(setAuthor(e.target.value))}
+            />
           </label>
         </div>
         <div className="book-form-buttons">
