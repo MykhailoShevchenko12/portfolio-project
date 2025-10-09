@@ -3,9 +3,63 @@
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
-  padding: 20px;
-  box-sizing: border-box;
   background-color: whitesmoke;
   color: black;
   border-radius: 5px;
+}
+
+.book-list h2 {
+  margin: 10px 0;
+}
+
+.book-list p {
+  margin-bottom: 20px;
+}
+
+.book-list .list {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.list-item-container {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.list-item-text {
+  margin-right: auto;
+}
+
+.list-item-favorite-btn,
+.list-item-delete-btn {
+  cursor: pointer;
+}
+
+.list-item-favorite-btn {
+  margin-right: 20px;
+  font-size: 1.5rem;
+  color: darkgoldenrod;
+}
+
+.list-item-delete-btn {
+  width: 70px;
+  height: 30px;
+  border: 1px solid red;
+  border-radius: 3px;
+  background-color: whitesmoke;
+  color: red;
+  transition: background-color 0.3s ease;
+}
+
+.list-item-delete-btn:hover {
+  background-color: rgb(255, 199, 199);
+}
+
+.book-list .list li:nth-child(odd) {
+  background-color: rgb(231, 231, 231);
+}
+
+.book-list .list li:last-child {
+  border-radius: 0 0 5px 5px;
 }
