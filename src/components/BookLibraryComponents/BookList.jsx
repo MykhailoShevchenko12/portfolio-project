@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { BsBookmarkStar, BsBookmarkStarFill } from 'react-icons/bs';
-import { deleteBook } from '../../store/features/bookLibrarySlice';
+import { deleteBook, toggleFavorite } from '../../store/features/booksSlice';
 import './BookList.css';
 
 const BookList = () => {
@@ -17,9 +17,12 @@ const BookList = () => {
               <li key={book.id}>
                 <div className="list-item-container">
                   <div className="list-item-text">
-                    {`${book.title} ${book.author}`}
+                    {`${book.title} - © ${book.author}`}
                   </div>
-                  <div className="list-item-favorite-btn">
+                  <div
+                    className="list-item-favorite-btn"
+                    onClick={() => dispatch(toggleFavorite(book.id))}
+                  >
                     {book.isFavorite ? (
                       <BsBookmarkStarFill />
                     ) : (

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../../store/features/bookLibrarySlice';
+import { addBook } from '../../store/features/booksSlice';
 import './BookForm.css';
 
 const BookForm = () => {
@@ -30,7 +30,7 @@ const BookForm = () => {
         onSubmit={(event) => formSubmitHandler(event)}
         className="book-form"
       >
-        <h2 className="book-form-h2">Add Book to the list</h2>
+        <h2 className="book-form-h2">Add Book to the List</h2>
         <div className="book-form-inputs">
           <label htmlFor="title">
             Title*
