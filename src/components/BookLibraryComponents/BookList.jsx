@@ -17,7 +17,7 @@ const BookList = () => {
               <li key={book.id}>
                 <div className="list-item-container">
                   <div className="list-item-text">
-                    {`${book.title} - © ${book.author}`}
+                    {book.title} - by <strong>{book.author}</strong>
                   </div>
                   <div
                     className="list-item-favorite-btn"

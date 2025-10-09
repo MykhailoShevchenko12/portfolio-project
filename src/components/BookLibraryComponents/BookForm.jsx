@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../../store/features/booksSlice';
+import { addBook, fetchBook } from '../../store/features/booksSlice';
 import './BookForm.css';
+import createBookWithID from '../../utils/createBookWithID';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
@@ -12,16 +12,14 @@ const BookForm = () => {
   function formSubmitHandler(event) {
     event.preventDefault();
     if (title && author) {
-      const newBook = {
-        title,
-        author,
-        isFavorite: false,
-        id: uuidv4(),
-      };
-      dispatch(addBook(newBook));
+      dispatch(addBook(createBookWithID({ title, author })));
     }
     setTitle('');
     setAuthor('');
+  }
+
+  function getRandomBoodViaAPI() {
+    dispatch(fetchBook('http://localhost:5000/random-quote'));
   }
 
   return (
@@ -61,7 +59,10 @@ const BookForm = () => {
             Add Random Book
           </button>
           <br />
-          <button className="book-form-addRandomBookViaAPI book-active">
+          <button
+            className="book-form-addRandomBookViaAPI book-active"
+            onClick={getRandomBoodViaAPI}
+          >
             Add Random Book via API
           </button>
         </div>
