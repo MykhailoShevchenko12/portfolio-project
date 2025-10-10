@@ -1,24 +1,28 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addBook, fetchBook } from '../../store/features/booksSlice';
 import './BookForm.css';
 import createBookWithID from '../../utils/createBookWithID';
+import { setError } from '../../store/features/errorSlice';
 
 const BookForm = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const isLoadingViaAPI = useSelector((state) => state.books.isLoadingViaAPI);
   const dispatch = useDispatch();
 
   function formSubmitHandler(event) {
     event.preventDefault();
     if (title && author) {
       dispatch(addBook(createBookWithID({ title, author })));
+      setTitle('');
+      setAuthor('');
+    } else {
+      dispatch(setError('You must fill the title and author'));
     }
-    setTitle('');
-    setAuthor('');
   }
 
-  function getRandomBoodViaAPI() {
+  function getRandomBookViaAPI() {
     dispatch(fetchBook('http://localhost:5000/random-quote'));
   }
 
@@ -61,9 +65,10 @@ const BookForm = () => {
           <br />
           <button
             className="book-form-addRandomBookViaAPI book-active"
-            onClick={getRandomBoodViaAPI}
+            onClick={getRandomBookViaAPI}
+            disabled={isLoadingViaAPI}
           >
-            Add Random Book via API
+            {isLoadingViaAPI ? 'Loading...' : 'Add Random Book via API'}
           </button>
         </div>
       </form>

@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import createBookWithID from '../../utils/createBookWithID';
+import { setError } from './errorSlice';
 
 const initialState = {
   books: [],
@@ -9,12 +10,13 @@ const initialState = {
 
 export const fetchBook = createAsyncThunk(
   'books/fetchBook',
-  async (API_URL) => {
+  async (API_URL, thunkAPI) => {
     try {
       const response = await axios.get(API_URL);
       return response.data;
     } catch (error) {
-      console.log(error);
+      thunkAPI.dispatch(setError(error.message));
+      return thunkAPI.rejectWithValue(error);
     }
   }
 );
