@@ -5,14 +5,28 @@ import './BookList.css';
 
 const BookList = () => {
   const books = useSelector((state) => state.books.books);
+  const { titleFilter, authorFilter, onlyFavorite } = useSelector(
+    (state) => state.filter
+  );
   const dispatch = useDispatch();
+
+  const filteredBooks = books.filter((book) => {
+    const matchesTitle = book.title
+      .toLowerCase()
+      .includes(titleFilter.toLowerCase());
+    const matchesAuthor = book.author
+      .toLowerCase()
+      .includes(authorFilter.toLowerCase());
+    const matchesFavorite = onlyFavorite ? book.isFavorite === true : true;
+    return matchesTitle && matchesAuthor && matchesFavorite;
+  });
 
   return (
     <div className="book-list">
       <h2>Book List</h2>
       {!!books.length ? (
         <ul className="list">
-          {books.map((book) => {
+          {filteredBooks.map((book) => {
             return (
               <li key={book.id}>
                 <div className="list-item-container">
