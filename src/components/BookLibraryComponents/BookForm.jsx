@@ -59,9 +59,6 @@ const BookForm = () => {
           <button type="submit" className="book-form-addBook book-active">
             Add Book
           </button>
-          <button className="book-form-addRandomBook book-active">
-            Add Random Book
-          </button>
           <br />
           <button
             className="book-form-addRandomBookViaAPI book-active"
