@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import MainPage from './pages/MainPage/MainPage';
+import AboutMe from './pages/AboutMe/AboutMe';
 import RandomQuote from './pages/RandomQuote/RandomQuote';
 import BookLibrary from './pages/BookLibraryApp/BookLibrary';
 import Docs from './pages/Docs/Docs';
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<AboutMe />} />
           <Route
             path="random-quotes"
             element={

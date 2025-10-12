@@ -10,9 +10,9 @@ import { MdWorkHistory } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 import my_photo from '../../assets/images/photo.png';
-import './MainPage.css';
+import './AboutMe.css';
 
-const MainPage = () => {
+const AboutMe = () => {
   return (
     <>
       <div className="container">
@@ -229,4 +229,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default AboutMe;
