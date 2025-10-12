@@ -30,11 +30,11 @@ const AboutMe = () => {
                 <h2>Контакти</h2>
                 <ul>
                   <div className="about-listItem">
-                    <FaSquarePhone />
+                    <FaSquarePhone className="listItem-icon" />
                     <li>+380660054160</li>
                   </div>
                   <div className="about-listItem">
-                    <IoIosMailUnread />
+                    <IoIosMailUnread className="listItem-icon" />
                     <li>mikhailshevchenko075@gmail.com</li>
                   </div>
                 </ul>
@@ -43,23 +43,23 @@ const AboutMe = () => {
                 <h2>Навички</h2>
                 <ul>
                   <div className="about-listItem">
-                    <FaSquareJs />
+                    <FaSquareJs className="listItem-icon" />
                     <li>JavaScript</li>
                   </div>
                   <div className="about-listItem">
-                    <RiReactjsLine />
+                    <RiReactjsLine className="listItem-icon" />
                     <li>React</li>
                   </div>
                   <div className="about-listItem">
-                    <TbBrandRedux />
+                    <TbBrandRedux className="listItem-icon" />
                     <li>Redux</li>
                   </div>
                   <div className="about-listItem">
-                    <FaHtml5 />
+                    <FaHtml5 className="listItem-icon" />
                     <li>HTML</li>
                   </div>
                   <div className="about-listItem">
-                    <FaCss3 />
+                    <FaCss3 className="listItem-icon" />
                     <li>Css</li>
                   </div>
                 </ul>
@@ -68,15 +68,15 @@ const AboutMe = () => {
                 <h2>Інструменти</h2>
                 <ul>
                   <div className="about-listItem">
-                    <TbBrandVscode />
+                    <TbBrandVscode className="listItem-icon" />
                     <li>vsCode</li>
                   </div>
                   <div className="about-listItem">
-                    <LuFigma />
+                    <LuFigma className="listItem-icon" />
                     <li>Figma</li>
                   </div>
                   <div className="about-listItem">
-                    <SiInsomnia />
+                    <SiInsomnia className="listItem-icon" />
                     <li>Insomnia</li>
                   </div>
                 </ul>
@@ -85,7 +85,7 @@ const AboutMe = () => {
                 <h2>Сертифікати</h2>
                 <ul>
                   <div className="about-listItem">
-                    <SiUdemy />
+                    <SiUdemy className="listItem-icon" />
                     <Link
                       to={
                         'https://www.udemy.com/certificate/UC-69f6bf84-3064-424e-a674-0f825d292baf/'
@@ -97,7 +97,7 @@ const AboutMe = () => {
                   </div>
 
                   <div className="about-listItem">
-                    <SiUdemy />
+                    <SiUdemy className="listItem-icon" />
                     <Link
                       to={
                         'https://www.udemy.com/certificate/UC-0c099c67-530d-4644-8716-8dd65a4fca30/'
