@@ -3,7 +3,6 @@ import './App.css';
 import AboutMe from './pages/AboutMe/AboutMe';
 import RandomQuote from './pages/RandomQuote/RandomQuote';
 import BookLibrary from './pages/BookLibraryApp/BookLibrary';
-import Docs from './pages/Docs/Docs';
 import Layout from './components/Layout/Layout';
 import QuoteProvider from './context/RandomQuoteContext';
 
@@ -22,7 +21,6 @@ function App() {
             }
           />
           <Route path="book-library" element={<BookLibrary />} />
-          <Route path="docs" element={<Docs />} />
         </Route>
       </Routes>
     </div>
