@@ -7,6 +7,7 @@ const BookLibrary = () => {
   return (
     <>
       <div className="container">
+        <h2>Book Library App</h2>
         <div className="book-library">
           <div className="leftside">
             <BookForm />
