@@ -49,3 +49,23 @@
   background-color: #496964;
   color: white;
 }
+
+@media (max-width: 1600px) {
+  .book-filter input[type='text'] {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-filter {
+    flex-direction: column;
+    height: auto;
+  }
+  .book-filter input,
+  button {
+    margin: 10px 0;
+  }
+  .book-filter input[type='text'] {
+    width: 60%;
+  }
+}
