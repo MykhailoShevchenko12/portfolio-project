@@ -32,7 +32,7 @@ const BookForm = () => {
         onSubmit={(event) => formSubmitHandler(event)}
         className="book-form"
       >
-        <h2 className="book-form-h2">Add Book to the List</h2>
+        <h2 className="book-form-h2">Add Book</h2>
         <div className="book-form-inputs">
           <label htmlFor="title">
             Title*
@@ -56,16 +56,16 @@ const BookForm = () => {
           </label>
         </div>
         <div className="book-form-buttons">
-          <button type="submit" className="book-form-addBook book-active">
+          <button type="submit" className="book-form-addBook-btn book-active">
             Add Book
           </button>
           <br />
           <button
-            className="book-form-addRandomBookViaAPI book-active"
+            className="book-form-addRandomBookViaAPI-btn book-active"
             onClick={getRandomBookViaAPI}
             disabled={isLoadingViaAPI}
           >
-            {isLoadingViaAPI ? 'Loading...' : 'Add Random Book via API'}
+            {isLoadingViaAPI ? 'Loading...' : 'Add Random Book'}
           </button>
         </div>
       </form>

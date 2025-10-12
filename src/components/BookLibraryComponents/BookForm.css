@@ -1,6 +1,6 @@
 .book-form {
   width: 100%;
-  height: 450px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@
 
 .book-form-inputs {
   width: 80%;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .book-form-inputs label {
@@ -24,7 +24,7 @@
 
 .form-input {
   width: 100%;
-  height: 40px;
+  height: 35px;
   margin: 10px 0;
   padding: 0 10px;
   box-sizing: border-box;
@@ -36,25 +36,22 @@
   width: 85%;
 }
 
-.book-form-addBook {
+.book-form-addBook-btn {
   width: 100px;
 }
 
-.book-form-addRandomBook {
+.book-form-addRandomBookViaAPI-btn {
   width: 150px;
-  margin-left: 10px;
-}
-
-.book-form-addRandomBookViaAPI {
-  width: 200px;
   margin-top: 10px;
 }
 
-.book-form-addBook,
-.book-form-addRandomBook,
-.book-form-addRandomBookViaAPI {
-  height: 35px;
+.book-form-addBook-btn,
+.book-form-addRandomBookViaAPI-btn {
+  height: auto;
+  padding: 5px 0;
+  box-sizing: border-box;
   background-color: #4ddbc5;
+  font-size: 0.8rem;
   font-weight: bold;
   border: none;
   border-radius: 5px;
