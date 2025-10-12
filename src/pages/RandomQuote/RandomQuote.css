@@ -5,7 +5,7 @@
 
 .quote {
   width: 60%;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   justify-items: center;
 }
 
@@ -22,13 +22,13 @@
   height: 160px;
   align-content: center;
   border-radius: 20px;
-  font-size: 1.5rem;
 }
 
 .quote-author {
-  width: 30%;
+  width: 20%;
   margin-top: 20px;
   border-radius: 15px;
+  font-size: 1rem;
 }
 
 .quote-buttons {
@@ -99,4 +99,53 @@
 .favorite-quote-text,
 .favorite-quote-author {
   text-align: center;
+}
+
+@media (max-width: 1280px) {
+  .quote {
+    font-size: 1rem;
+  }
+  .quote-author {
+    width: 25%;
+  }
+  .quote-buttons {
+    width: 20%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .quote-author {
+    width: 30%;
+  }
+  .quote-buttons {
+    width: 25%;
+  }
+  .quote-favorites {
+    flex-direction: column;
+  }
+  .favorite-quote {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote {
+    width: 80%;
+  }
+  .quote-author {
+    width: 35%;
+  }
+  .quote-buttons {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-author {
+    width: 45%;
+  }
+  .quote-buttons {
+    width: 60%;
+  }
 }
