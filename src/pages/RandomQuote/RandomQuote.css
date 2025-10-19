@@ -8,6 +8,7 @@
 .quote {
   width: 60%;
   font-size: 1.5rem;
+  align-items: center;
 }
 
 .quote-text,
